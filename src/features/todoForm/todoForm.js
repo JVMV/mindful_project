@@ -17,7 +17,6 @@ export function TodoForm() {
 
     return (
         <div>
-            <p>todoForm</p>
             <form onSubmit={handleFormSubmit}>
                 <input 
                     name='todoInput' 
