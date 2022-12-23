@@ -2,17 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { TodoForm } from './features/todoForm/todoForm';
 import { TodoList } from './features/todoList/TodoList.js';
 import './App.css';
-import { fetchBackgroundImages, fetchWeather } from './api/apiCalls';
+import { fetchBackgroundImages, fetchWeather, fetchQuote } from './api/apiCalls';
 import { Weather } from './features/fetchWeather/Weather';
+import { Quote } from './features/fetchQuote/Quote';
 
 function App() {
-  const [imagesArray, setImagesArray] = useState([])
+  const [imagesArray, setImagesArray] = useState([]);
   const [currentImage, setCurrentImage] = useState(0);
-  const [weather, setWeather] = useState(null)
+  const [weather, setWeather] = useState(null);
+  const [quote, setQuote] = useState(null);
 
   useEffect(() => {
     fetchBackgroundImages(setImagesArray);
     fetchWeather(setWeather);
+    fetchQuote(setQuote);
   }, [])
   
   const handleImageSwitch = (direction) => {
@@ -40,6 +43,9 @@ function App() {
         </div>
         <h1 className="App-logo">PROJECT1 TODO FORM</h1>
       </header>
+      <div className='quote'>
+        <Quote fetchedQuote={quote} />
+      </div>
       <div className='imageSwitcher'>
         <button onClick={() => {handleImageSwitch('backward')}} name='backward'>{'<<'}</button>
         <button onClick={() => {handleImageSwitch('forward')}} name='forward'>{'>>'}</button>

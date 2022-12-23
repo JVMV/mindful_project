@@ -1,10 +1,9 @@
 import React from 'react';
 
 export const Weather = ({ weather }) => {
-    const { temp } = weather.main;
     return (
         <span>
-            {!weather ? <span>Loading...</span> : <span>{`${Math.round(temp)}°F`}</span>}
+            {!weather ? <span>Loading...</span> : <span>{`${Math.round(weather.main.temp)}°F`}</span>}
         </span>
     )
 }

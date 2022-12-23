@@ -32,6 +32,19 @@ const fetchWeather = (setState) => {
             appid: '408b8b6168b4afe627ffbbc7488b3991'
         }
     }).then(res => {
+        console.log(res.data)
+        setState(res.data)
+    }).catch(error => {
+        console.log(error.message)
+    })
+}
+
+const fetchQuote = (setState) => {
+    axios({
+        method: 'GET',
+        baseURL: 'https://quotes.rest',
+        url: '/qod'
+    }).then(res => {
         setState(res.data)
     }).catch(error => {
         console.log(error.message)
@@ -40,5 +53,6 @@ const fetchWeather = (setState) => {
 
 export {
     fetchBackgroundImages,
-    fetchWeather
+    fetchWeather,
+    fetchQuote
 }

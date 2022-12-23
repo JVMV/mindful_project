@@ -31,6 +31,10 @@
   align-self: flex-end;
 }
 
+.quote{
+  position: relative;
+}
+
 .todoWrapper {
   /* border: black solid 2px; */
   display: flex;
