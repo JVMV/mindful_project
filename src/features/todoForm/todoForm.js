@@ -19,15 +19,15 @@ export function TodoForm() {
     return (
         <div>
             <form id='todoForm' className='todoForm' onSubmit={handleFormSubmit}>
-                <label htmlFor='todoInput' >Add a todo</label>
+                <label htmlFor='todoInput' >Ready to be productive?</label>
                 <input 
                     name='todoInput' 
                     id='todoInput'
                     value={todoInput}
                     onChange={handleTodoChange}
-                    placeholder='type in a new todo'
+                    placeholder='Type Here'
                 /> 
-                <button>Add Todo</button> 
+                {/* <button>Add Todo</button>  */}
             </form>
         </div>
     )

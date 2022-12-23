@@ -11,7 +11,7 @@ const fetchBackgroundImages = (setState) => {
         params: {
           orientation: 'landscape',
           count: 5,
-          topics: 'christmas lights'
+          topics: 'christmas tree'
         }
       }).then(res => {
         const fetchedImages = res.data;
