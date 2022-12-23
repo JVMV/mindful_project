@@ -1,12 +1,59 @@
 .App {
   text-align: center;
-  border: 2px solid red;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* border: solid 2px blue; */
+}
+
+.App::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(255, 255, 255, .6);
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+.todoWrapper {
+  /* border: black solid 2px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .25);
+  backdrop-filter: blur(10px);
+}
+
+.imageSwitcher {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: solid 2px red; */
+  align-self: auto;
+  width: 75vw;
+  height: 10vh;
+}
+
+  .imageSwitcher button {
+    padding: 5%;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: none;
+    backdrop-filter: blur(5px);
+  }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -15,12 +62,13 @@
 }
 
 .App-header {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  position: relative;
 }
 
 .App-link {
