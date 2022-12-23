@@ -26,6 +26,11 @@
   pointer-events: none;
 }
 
+.weather {
+  /* border: solid 2px red; */
+  align-self: flex-end;
+}
+
 .todoWrapper {
   /* border: black solid 2px; */
   display: flex;

@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import { TodoForm } from './features/todoForm/todoForm';
 import { TodoList } from './features/todoList/TodoList.js';
 import './App.css';
-import axios from 'axios';
-import { fetchImages, backgroundImages } from './app/data';
-import { fetchBackgroundImages } from './api/apiCalls';
+import { fetchBackgroundImages, fetchWeather } from './api/apiCalls';
+import { Weather } from './features/fetchWeather/Weather';
 
 function App() {
   const [imagesArray, setImagesArray] = useState([])
   const [currentImage, setCurrentImage] = useState(0);
+  const [weather, setWeather] = useState(null)
 
   useEffect(() => {
     fetchBackgroundImages(setImagesArray);
+    fetchWeather(setWeather);
   }, [])
   
   const handleImageSwitch = (direction) => {
@@ -32,6 +31,9 @@ function App() {
       : null
     }>
       <header className="App-header">
+        <div className='weather'>
+          <Weather weather={weather} />
+        </div>
         <div className='todoWrapper'>
           <TodoForm />
           <TodoList />

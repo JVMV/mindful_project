@@ -11,7 +11,7 @@ const fetchBackgroundImages = (setState) => {
         params: {
           orientation: 'landscape',
           count: 5,
-          topics: 'holidays'
+          topics: 'christmas lights'
         }
       }).then(res => {
         const fetchedImages = res.data;
@@ -22,7 +22,20 @@ const fetchBackgroundImages = (setState) => {
 }
 
 const fetchWeather = (setState) => {
-    return;
+    axios({
+        method: 'GET',
+        url: 'https://api.openweathermap.org/data/2.5/weather?',
+        params: {
+            lat: '36.17',
+            lon: '115.13',
+            units: 'imperial',
+            appid: '408b8b6168b4afe627ffbbc7488b3991'
+        }
+    }).then(res => {
+        setState(res.data)
+    }).catch(error => {
+        console.log(error.message)
+    })
 }
 
 export {
