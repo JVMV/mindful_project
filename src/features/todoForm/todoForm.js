@@ -18,9 +18,11 @@ export function TodoForm() {
 
     return (
         <div>
-            <form onSubmit={handleFormSubmit}>
+            <form id='todoForm' className='todoForm' onSubmit={handleFormSubmit}>
+                <label htmlFor='todoInput' >Add a todo</label>
                 <input 
                     name='todoInput' 
+                    id='todoInput'
                     value={todoInput}
                     onChange={handleTodoChange}
                     placeholder='type in a new todo'

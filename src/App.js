@@ -34,6 +34,7 @@ function App() {
       : null
     }>
       <header className="App-header">
+        <h1 className="App-logo">PROJECT1 TODO FORM</h1>
         <div className='weather'>
           <Weather weather={weather} />
         </div>
@@ -41,7 +42,6 @@ function App() {
           <TodoForm />
           <TodoList />
         </div>
-        <h1 className="App-logo">PROJECT1 TODO FORM</h1>
       </header>
       <div className='quote'>
         <Quote fetchedQuote={quote} />

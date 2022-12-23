@@ -3,7 +3,7 @@ import  { createSlice } from '@reduxjs/toolkit';
 const todoListSlice = createSlice({
     name: 'todoList',
     initialState: {
-        todos: ['test', 'works'],
+        todos: [],
         completedTodos: []
     },
     reducers: {
