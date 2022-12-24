@@ -13,7 +13,7 @@
     align-items: center;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgba(0, 255, 179, 0.25);
+    background-color: rgba(0, 255, 179, 0.4);
     border: solid 2px cornsilk;
     color: white;
 }
@@ -26,4 +26,26 @@
     background-color: rgba(0, 0, 0, 0.10);
     color: rgba(0, 0, 0, 0.3);
     border: solid 2px transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .todoBox {
+      animation: todoBox-float infinite 3s ease-in-out;
+    }
+
+    .completed {
+        animation: none;
+    }
+  }
+
+@keyframes todoBox-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

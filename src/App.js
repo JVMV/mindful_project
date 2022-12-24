@@ -34,7 +34,7 @@ function App() {
       : null
     }>
       <header className="App-header">
-        <h1 className="App-logo">PROJECT1 TODO FORM</h1>
+        {/* <h1 className="App-logo">PROJECT1 TODO FORM</h1> */}
         <div className='weather'>
           <Weather weather={weather} />
         </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { selectTodoInput, updateTodoInput } from './todoFormSlice';
 import { addTodo } from '../todoList/todoListSlice';
 import { useSelector, useDispatch } from 'react-redux';
-import './todoForm.module.css';
+import './todoForm.css';
 
 export function TodoForm() {
     const todoInput = useSelector(selectTodoInput);

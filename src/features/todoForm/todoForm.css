@@ -3,6 +3,8 @@ form {
     display: flex;
     flex-flow: column wrap;
     width: 40vw;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 form label {
@@ -19,9 +21,16 @@ form input {
     border-left: none;
     border-right: none;
     border-bottom: solid 5px;
-    border-bottom-color: rgba(0, 0, 0, 0.2);
+    /* border-bottom-color: rgba(0, 0, 0, 0.2); */
+    border-bottom-color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
+    font-weight: bold;
 }
- input:focus {
+
+input:focus {
     outline: none;
- }
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
