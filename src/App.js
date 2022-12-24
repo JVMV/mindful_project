@@ -22,7 +22,7 @@ function App() {
     if(direction === 'backward' && currentImage !== 0)
       return setCurrentImage(currentImage - 1)
 
-    if(direction === 'forward' && currentImage !== 4)
+    if(direction === 'forward' && currentImage !== imagesArray.length - 1)
       return setCurrentImage(currentImage + 1)
   }
   
@@ -40,6 +40,8 @@ function App() {
         </div>
         <div className='todoWrapper'>
           <TodoForm />
+        </div>
+        <div id='todoListWrapper' className='todoWrapper'>
           <TodoList />
         </div>
       </header>

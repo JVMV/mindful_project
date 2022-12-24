@@ -1,0 +1,29 @@
+.todoList {
+    display: flex;
+    flex-flow: row wrap;
+    /* border: solid 3px purple; */
+}
+
+.todoBox {
+    /* border: solid 2px pink; */
+    margin: 2%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 255, 179, 0.25);
+    border: solid 2px cornsilk;
+    color: white;
+}
+
+.emptyList {
+    color: rgba(228, 228, 228, .5)
+}
+
+.completed {
+    background-color: rgba(0, 0, 0, 0.10);
+    color: rgba(0, 0, 0, 0.3);
+    border: solid 2px transparent;
+}

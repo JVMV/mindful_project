@@ -34,7 +34,14 @@
 
 .quote{
   position: relative;
-  height: 20vh;
+  margin-top: 8%;
+  /* height: 20vh; */
+  /* border: solid 1px red; */
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0 1%;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .todoWrapper {
@@ -44,10 +51,18 @@
   justify-content: center;
   flex-flow: column nowrap;
   width: 100%;
-  height: 30vh;
-  background-color: rgba(0, 0, 0, .25);
+  max-width: 65vw;
+  max-height: fit-content;
+  background-color: rgba(0, 0, 0, .10);
   backdrop-filter: blur(10px);
   z-index: 1;
+  padding: 1%;
+  border-radius: 10px;
+}
+#todoListWrapper {
+  margin: 10% 0;
+  /* border: solid 2px red; */
+  padding: 2%
 }
 
 .imageSwitcher {
@@ -65,7 +80,7 @@
 
   .imageSwitcher button {
     padding: 5%;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.1);
     border: none;
     backdrop-filter: blur(5px);
     border-radius: 25%;

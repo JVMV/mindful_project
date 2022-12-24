@@ -11,7 +11,7 @@ const fetchBackgroundImages = (setState) => {
         params: {
           orientation: 'landscape',
           count: 5,
-          topics: 'christmas tree'
+          query: 'christmas lights'
         }
       }).then(res => {
         const fetchedImages = res.data;
@@ -32,7 +32,6 @@ const fetchWeather = (setState) => {
             appid: '408b8b6168b4afe627ffbbc7488b3991'
         }
     }).then(res => {
-        console.log(res.data)
         setState(res.data)
     }).catch(error => {
         console.log(error.message)
