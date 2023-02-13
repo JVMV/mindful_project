@@ -34,3 +34,12 @@ input:focus {
 ::placeholder {
     color: rgba(255, 255, 255, 0.8);
 }
+
+@media screen and (max-width: 610px) {
+    form {
+        width: 100%;
+        justify-content: center;
+        flex-direction: row;
+        /* border: solid 1px red; */
+    }
+}

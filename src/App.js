@@ -17,7 +17,7 @@ function App() {
     fetchWeather(setWeather);
     fetchQuote(setQuote);
   }, [])
-  
+
   const handleImageSwitch = (direction) => {
     if(direction === 'backward' && currentImage !== 0)
       return setCurrentImage(currentImage - 1)
@@ -25,34 +25,33 @@ function App() {
     if(direction === 'forward' && currentImage !== imagesArray.length - 1)
       return setCurrentImage(currentImage + 1)
   }
-  
 
   return (
-    <div className="App" style={
-      imagesArray.length > 0 
+    <body className="App" style={
+      imagesArray.length > 0
       ? {backgroundImage: `url(${imagesArray[currentImage].urls.full})`}
       : null
     }>
       <header className="App-header">
         {/* <h1 className="App-logo">PROJECT1 TODO FORM</h1> */}
-        <div className='weather'>
+        <section className='weather'>
           <Weather weather={weather} />
-        </div>
-        <div className='todoWrapper'>
+        </section>
+        <section className='todoWrapper'>
           <TodoForm />
-        </div>
-        <div id='todoListWrapper' className='todoWrapper'>
+        </section>
+        <section id='todoListWrapper' className='todoWrapper'>
           <TodoList />
-        </div>
+        </section>
       </header>
-      <div className='quote'>
+      <section className='quote'>
         <Quote fetchedQuote={quote} />
-      </div>
+      </section>
       <div className='imageSwitcher'>
         <button onClick={() => {handleImageSwitch('backward')}} name='backward'>{'<<'}</button>
         <button onClick={() => {handleImageSwitch('forward')}} name='forward'>{'>>'}</button>
       </div>
-    </div>
+    </body>
   );
 }
 
