@@ -32,7 +32,7 @@ function App() {
       ? {backgroundImage: `url(${imagesArray[currentImage].urls.full})`}
       : null
     }>
-      <header className="App-header">
+      <main className="App-container">
         {/* <h1 className="App-logo">PROJECT1 TODO FORM</h1> */}
         <section className='weather'>
           <Weather weather={weather} />
@@ -43,7 +43,7 @@ function App() {
         <section id='todoListWrapper' className='todoWrapper'>
           <TodoList />
         </section>
-      </header>
+      </main>
       <section className='quote'>
         <Quote fetchedQuote={quote} />
       </section>
